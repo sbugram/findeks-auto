@@ -1,0 +1,42 @@
+
+> findeks-auto-serverless@1.0.0 test
+> wdio run wdio.conf.js
+
+
+Execution of 1 workers started at 2026-04-13T12:50:39.832Z
+
+[0-0] RUNNING in chrome - file:///D:/IdeaProjects/FindeksAuto/test/findeks.test.js
+[0-0] 2026-04-13T12:50:41.529Z WARN chromedriver: [1776084641.529][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
+[0-0] 2026-04-13T12:50:41.530Z WARN chromedriver: [1776084641.529][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
+[0-0] [Upstash] Clearing existing OTP key "findeks_otp"ÔÇĞ
+[0-0] [Upstash] WARNING: Token lacks permission to delete keys (NOPERM). Skipping clearOTP.
+[0-0] [Test] Navigating to login pageÔÇĞ
+[0-0] [After Test Hook] Screenshot saved to errorShots/
+[0-0] Error in "Findeks Credit Score Automation.should log in, retrieve OTP, navigate the credit score flow, and extract the score"
+Error: FINDEKS_TC and FINDEKS_PASSWORD environment variables must be set.
+    at Context.<anonymous> (D:\IdeaProjects\FindeksAuto\test\findeks.test.js:23:19)
+    at async Context.executeAsync (D:\IdeaProjects\FindeksAuto\node_modules\@wdio\utils\build\index.js:1108:20)
+    at async Context.testFrameworkFnWrapper (D:\IdeaProjects\FindeksAuto\node_modules\@wdio\utils\build\index.js:1188:14)
+[0-0] FAILED in chrome - file:///D:/IdeaProjects/FindeksAuto/test/findeks.test.js
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome 147.0.7727.56 windows #0-0] Running: chrome (v147.0.7727.56) on windows
+[chrome 147.0.7727.56 windows #0-0] Session ID: 6341a6b887ebbd0491f177b575ef1eb8
+[chrome 147.0.7727.56 windows #0-0]
+[chrome 147.0.7727.56 windows #0-0] ┬╗ test\findeks.test.js
+[chrome 147.0.7727.56 windows #0-0] Findeks Credit Score Automation
+[chrome 147.0.7727.56 windows #0-0]    Ô£û should log in, retrieve OTP, navigate the credit score flow, and extract the score
+[chrome 147.0.7727.56 windows #0-0]
+[chrome 147.0.7727.56 windows #0-0] 1 failing (2.7s)
+[chrome 147.0.7727.56 windows #0-0]
+[chrome 147.0.7727.56 windows #0-0] 1) Findeks Credit Score Automation should log in, retrieve OTP, navigate the credit score flow, and extract the score
+[chrome 147.0.7727.56 windows #0-0] FINDEKS_TC and FINDEKS_PASSWORD environment variables must be set.
+[chrome 147.0.7727.56 windows #0-0] Error: FINDEKS_TC and FINDEKS_PASSWORD environment variables must be set.
+[chrome 147.0.7727.56 windows #0-0]     at Context.<anonymous> (D:\IdeaProjects\FindeksAuto\test\findeks.test.js:23:19)
+[chrome 147.0.7727.56 windows #0-0]     at async Context.executeAsync (D:\IdeaProjects\FindeksAuto\node_modules\@wdio\utils\build\index.js:1108:20)
+[chrome 147.0.7727.56 windows #0-0]     at async Context.testFrameworkFnWrapper (D:\IdeaProjects\FindeksAuto\node_modules\@wdio\utils\build\index.js:1188:14)
+
+
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:05  
+

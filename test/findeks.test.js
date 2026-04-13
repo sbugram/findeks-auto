@@ -1,11 +1,13 @@
 'use strict';
 
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
+
 const loginPage = require('../src/pages/LoginPage');
 const creditScorePage = require('../src/pages/CreditScorePage');
 const { clearOTP, waitForOTP } = require('../utils/upstash');
 
 const LOGIN_URL = process.env.FINDEKS_LOGIN_URL || 'https://www.findeks.com/giris';
-const TC = process.env.FINDEKS_TC;
+const TC = process.env.FINDEKS_TC || process.env.FINDEKS_TC_ID;
 const PASSWORD = process.env.FINDEKS_PASSWORD;
 
 describe('Findeks Credit Score Automation', () => {
