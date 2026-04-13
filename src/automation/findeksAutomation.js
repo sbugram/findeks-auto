@@ -52,7 +52,6 @@ async function runFindeksAutomation() {
                     '--disable-dev-shm-usage',
                     '--disable-gpu',
                     '--window-size=1920,1080',
-                    '--incognito',
                     '--disable-blink-features=AutomationControlled',
                     '--disable-extensions',
                     '--disable-infobars',
