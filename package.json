@@ -1,0 +1,19 @@
+{
+  "name": "findeks-auto-serverless",
+  "version": "1.0.0",
+  "description": "Serverless Findeks credit score scraper running on GitHub Actions with Upstash Redis OTP polling.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "wdio run wdio.conf.js"
+  },
+  "dependencies": {
+    "@wdio/cli": "^9.0.0",
+    "@wdio/local-runner": "^9.0.0",
+    "@wdio/mocha-framework": "^9.0.0",
+    "@wdio/spec-reporter": "^9.0.0",
+    "webdriverio": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
