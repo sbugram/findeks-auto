@@ -36,3 +36,11 @@ jobs:
           UPSTASH_URL:         ${{ secrets.UPSTASH_URL }}
           UPSTASH_TOKEN:       ${{ secrets.UPSTASH_TOKEN }}
           FINDEKS_LOGIN_URL:   https://www.findeks.com/giris
+
+      - name: Upload Error Screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: webdriverio-error-shots
+          path: errorShots/
+          retention-days: 7

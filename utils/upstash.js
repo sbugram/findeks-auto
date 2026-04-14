@@ -53,9 +53,13 @@ async function clearOTP() {
         console.log(`[Upstash] clearOTP result: ${data.result} key(s) deleted.`);
     } catch (err) {
         if (err.message.includes('NOPERM')) {
-            console.log(`[Upstash] WARNING: Token lacks permission to delete keys (NOPERM). Skipping clearOTP.`);
-            // Alternatively, setting it to string "consumed" might fail with NOPERM if the token only allows GET
-            // So we just skip clearing and assume the polling loop will read the right value when the user pushes it.
+            console.log(`[Upstash] WARNING: Token lacks DEL permission. Overwriting key with "consumed" instead.`);
+            try {
+                await upstashFetch(`/set/${OTP_KEY}/consumed`);
+                console.log(`[Upstash] Overwrote stale OTP successfully.`);
+            } catch (setErr) {
+                console.log(`[Upstash] Failed to overwrite stale OTP: ${setErr.message}`);
+            }
         } else {
             console.log(`[Upstash] WARNING: Failed to clear old OTP (safe to ignore): ${err.message}`);
         }
