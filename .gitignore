@@ -3,6 +3,7 @@ node_modules/
 data/
 logs/
 *.log
+errorShots/
 
 # WebdriverIO artifacts
 .wdio-*
