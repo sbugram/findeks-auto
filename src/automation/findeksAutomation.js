@@ -8,7 +8,7 @@ const dashboardPage = require('../pages/DashboardPage');
 const { saveResult } = require('../utils/resultSaver');
 
 const OTP_TIMEOUT_MS = parseInt(process.env.OTP_TIMEOUT_MS || '180000', 10);
-const LOGIN_URL = process.env.FINDEKS_LOGIN_URL || 'https://www.findeks.com/giris';
+const LOGIN_URL = process.env.FINDEKS_LOGIN_URL || 'https://isube.findeks.com/ers/login.xhtml';
 const TC_ID = process.env.FINDEKS_TC_ID;
 const PASSWORD = process.env.FINDEKS_PASSWORD;
 
