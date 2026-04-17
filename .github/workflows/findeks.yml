@@ -35,7 +35,7 @@ jobs:
           FINDEKS_PASSWORD:    ${{ secrets.FINDEKS_PASSWORD }}
           UPSTASH_URL:         ${{ secrets.UPSTASH_URL }}
           UPSTASH_TOKEN:       ${{ secrets.UPSTASH_TOKEN }}
-          FINDEKS_LOGIN_URL:   https://www.findeks.com/giris
+          FINDEKS_LOGIN_URL:   https://isube.findeks.com/ers/login.xhtml
 
       - name: Upload Error Screenshots
         if: failure()

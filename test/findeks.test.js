@@ -6,7 +6,7 @@ const loginPage = require('../src/pages/LoginPage');
 const creditScorePage = require('../src/pages/CreditScorePage');
 const { clearOTP, waitForOTP } = require('../utils/upstash');
 
-const LOGIN_URL = process.env.FINDEKS_LOGIN_URL || 'https://www.findeks.com/giris';
+const LOGIN_URL = process.env.FINDEKS_LOGIN_URL || 'https://isube.findeks.com/ers/login.xhtml';
 const TC = process.env.FINDEKS_TC || process.env.FINDEKS_TC_ID;
 const PASSWORD = process.env.FINDEKS_PASSWORD;
 
